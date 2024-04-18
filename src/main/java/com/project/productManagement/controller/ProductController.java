@@ -82,6 +82,7 @@ public class ProductController {
 	public String saveProduct(@RequestBody Product product) {
 
 		pdService.save(product);
+		System.err.println("hello spring boot");
 		return "Product Saved Successfully!";
 	}
 
