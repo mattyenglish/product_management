@@ -42,7 +42,7 @@ public class ProductController {
 	@GetMapping("/id/{id}")
 	public ResponseEntity<Product> getProductsById(@PathVariable int id) {
 		Optional<Product> product = pdService.getProductById(id);
-		// String message = "Product with " + id + " is not found";
+		
 		if (product.isPresent()) {
 			return ResponseEntity.ok(product.get());
 		} else {
