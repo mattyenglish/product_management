@@ -30,15 +30,7 @@ public class ProductController {
 	@Autowired
 	private ProductRepository pdRepo;
 
-	// get products using pagination
-	/*
-	 * @GetMapping("/page") public ResponseEntity<Page<Product>>
-	 * getAllEntities(@RequestParam(defaultValue = "0") int page,
-	 * 
-	 * @RequestParam(defaultValue = "5") int size) { Page<Product> entities =
-	 * pdService.getAllEntities(PageRequest.of(page, size)); return
-	 * ResponseEntity.ok(entities); }
-	 */
+	
 
 	// get all products
 	@GetMapping("/allProducts")
