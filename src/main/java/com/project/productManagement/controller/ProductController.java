@@ -21,14 +21,28 @@ import com.project.productManagement.model.Product;
 import com.project.productManagement.repository.ProductRepository;
 import com.project.productManagement.service.ProductService;
 
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+
 @RestController
 @RequestMapping("/product")
+@RequiredArgsConstructor
+//@AllArgsConstructor
 public class ProductController {
 
-	@Autowired
-	private ProductService pdService;
-	@Autowired
-	private ProductRepository pdRepo;
+
+	private final ProductService pdService;
+	private final ProductRepository pdRepo;
+	private String s1;
+	
+
+	/*public ProductController(ProductService pdService, ProductRepository pdRepo) {
+		super();
+		this.pdService = pdService;
+		this.pdRepo = pdRepo;
+	}*/
+
+	
 
 	
 
